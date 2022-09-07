@@ -1,0 +1,333 @@
+@font-face {
+    font-family: electronicFont;
+    src: url('../../../font/DS-DIGIT.TTF');
+}
+.home-main {
+    width: 100vw;
+    height: 100vh;
+    .ant-layout {
+        width: 100%;
+        height: 100%;
+        min-width: 1280px;
+        padding: 0;
+        background-image: url('../../../img/map.png');
+        background-position: center;
+        margin: 0 auto;
+    }
+    .ant-layout-header {
+        width: 100%;
+        background-image: url('../../../img/home_nav_bg.png');
+        background-position: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 106px;
+        line-height: 106px;
+    }
+    .ant-layout-content {
+        overflow-y: auto;
+        padding: 20px;
+    }
+}
+.model-main,
+.dots-main {
+    height: 20rem;
+}
+
+.train-box {
+    position: relative;
+    height: 28rem;
+    .img-div {
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 28rem;
+        background-size: 940px auto;
+    }
+    //.img1 {
+    //    background-image: url('../../../img/highConsistencyRefinerSystem.svg');
+    //}
+    //.img2 {
+    //    background-image: url('../../../img/vacuumPumpSystem.svg');
+    //}
+}
+
+@keyframes warn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    10% {
+        transform: scale(0.2);
+        opacity: 0.2;
+    }
+    20% {
+        transform: scale(0.4);
+        opacity: 0.4;
+    }
+    30% {
+        transform: scale(0.6);
+        opacity: 0.6;
+    }
+    40% {
+        transform: scale(0.8);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    60% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    70% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    80% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    90% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.click-container {
+    width: 60px;
+    height: 60px;
+    animation: warn 1s ease-out;
+    -webkit-animation: warn 1s ease-out;
+    animation-iteration-count: infinite;
+    position: relative;
+
+    /* 保持大小不变的小圆圈  */
+    .dot {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 20px;
+        top: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border: 1px solid #f40d0d;
+        background: #f43d3db0;
+        border-radius: 20px;
+        z-index: 2;
+        animation: warn 1s ease-out;
+        -webkit-animation: warn 1s ease-out;
+        animation-iteration-count: infinite;
+    }
+
+    /* 产生动画（向外扩散变大）的圆圈  */
+    .pulse {
+        position: absolute;
+        width: 34px;
+        height: 34px;
+        left: 13px;
+        top: 13px;
+        border: 1px solid #f4313169;
+        background: #ed2b2b4a;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px;
+        z-index: 1;
+    }
+}
+.click-box {
+    position: absolute;
+    left: 295px;
+    top: 316px;
+    button.ant-btn {
+        width: 60px;
+        height: 60px;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        position: absolute;
+        opacity: 0;
+    }
+}
+
+.system-name {
+    font-size: 3rem;
+    color: #fff;
+    font-family: electronicFont, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+.cycle {
+    height: 28rem;
+}
+.math {
+    height: 28rem;
+}
+.cycle .img-box {
+    position: absolute;
+    background-image: url('../../../img/cycle.png');
+    height: 262px;
+    width: 282px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes changeColor {
+    0% {
+        color: #f00;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+    50% {
+        color: #fff;
+        transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+    }
+    100% {
+        color: #f00;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}
+@keyframes changeBgColor {
+    0% {
+        background-color: rgba(12, 12, 12, 0.8);
+    }
+    50% {
+        background-color: rgba(7, 7, 7, 0);
+    }
+    100% {
+        background-color: rgba(12, 12, 12, 0.8);
+    }
+}
+.cycle-details {
+    width: 100%;
+
+    .panel {
+        height: 20rem;
+        &.hover {
+            transform: translateY(-20px);
+            transition: all 0.2s ease-out;
+        }
+        .emergency-main {
+            text-align: center;
+        }
+        &.status-warning {
+            animation: changeBgColor 1s ease-out;
+            animation-iteration-count: infinite;
+            .emergency-main i {
+                animation: changeColor 1s ease-out;
+                animation-iteration-count: infinite;
+                font-size: 2.5rem;
+                display: inline-block;
+            }
+            .emergency-message {
+                font-size: 0.8rem;
+            }
+        }
+        .marquee-main,
+        .marquee-main .ant-row {
+            height: 100%;
+        }
+        .marquee-view {
+            top: 2rem;
+            left: 0;
+        }
+
+        .ant-col {
+            margin-bottom: -4px;
+        }
+        &.info .value {
+            font-size: 1rem;
+            margin-bottom: -0.3rem;
+        }
+        &.info {
+            .ant-col {
+                padding-right: 0;
+            }
+        }
+    }
+
+    .info-main {
+        height: 100%;
+    }
+    .info-main > .ant-row > .ant-col:last-child {
+        padding-left: 10px;
+    }
+    .ant-tabs-tab {
+        padding: 0 0 3px 0;
+        color: #fff;
+    }
+}
+.img-box .ele {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    position: absolute;
+    padding: 5px;
+    border: 1px solid rgba(24, 144, 255, 0.8);
+    cursor: pointer;
+
+    &:not(.disabled):hover {
+        transform: scale(1.2);
+        transition: all 0.2s ease-out;
+    }
+    &.disabled {
+        border: 1px solid rgba(0, 0, 0, 0.8);
+    }
+    span {
+        position: absolute;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 1rem;
+        display: inline-block;
+        left: 5px;
+        text-align: center;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &::after {
+        position: absolute;
+        z-index: 0;
+        left: 2px;
+        right: 2px;
+        bottom: 2px;
+        border-radius: 50%;
+        background: rgba(24, 144, 255, 0.5);
+        content: '';
+        top: 2px;
+    }
+    &.disabled::after {
+        background: rgba(255, 255, 255, 0.5);
+    }
+    &.emergency {
+        top: 152px;
+        left: 241px;
+    }
+    &.maintenance {
+        top: -30px;
+        left: 220px;
+    }
+    &.fault {
+        top: 195px;
+        left: 122px;
+    }
+    &.forecast {
+        top: 144px;
+        left: -23px;
+    }
+    &.info {
+        left: -11px;
+        top: -31px;
+    }
+}
+.emergency-icon {
+    margin: -10px 0 -5px 0;
+}
+.home-gauge-description {
+    margin-top: -30px;
+}
