@@ -11,7 +11,7 @@ const ComputeContainer=lazy(()=>import('@/phm/components/compute/container/index
 const detailsArr = [
     { key: 'home', title: '主页',element:<Home></Home> },
     { key: 'info', title: '信息页',element: <InfoContainer></InfoContainer> },
-    { key: 'monitor', title: '监控',element: <MaintenanceContainer></MaintenanceContainer> },
+    { key: 'monitor', title: '监控',element: <MonitorContainer></MonitorContainer> },
     { key: 'fault', title: '故障维护',element: <FaultContainer></FaultContainer> },
     { key: 'forecast', title: '预测维护',element: <ForecastContainer></ForecastContainer> },
     { key: 'maintenance', title: '日常维护管理',element: <MaintenanceContainer></MaintenanceContainer> },

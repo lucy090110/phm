@@ -9,7 +9,6 @@ import reportWebVitals from './reportWebVitals';
 
 const root =  document.getElementById('root');
 ReactDOM.render(
-  <React.StrictMode>
       <Provider store={store}>
           <Suspense fallback={<div>加载中</div>}>
               <Router>
@@ -17,7 +16,6 @@ ReactDOM.render(
               </Router>
           </Suspense>
       </Provider>
-  </React.StrictMode>
 ,root);
 
 // If you want to start measuring performance in your app, pass a function

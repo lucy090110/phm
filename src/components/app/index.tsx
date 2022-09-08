@@ -8,10 +8,8 @@ import FilterComponent from '@/phm/components/common/filterComponent';
 const { Header, Content } = Layout;
 const Main: React.FC = (props: any) => {
     const location = useLocation();
-    const { currentKey } = props;
     const { pathname, hash, search } = location;
     useEffect(() => {
-        console.log(`effect--------1`)
         props.getCurrent();
     },[pathname, hash, search]);
     return (
@@ -20,7 +18,7 @@ const Main: React.FC = (props: any) => {
                 <Header>
                     <NavMenu
                         {...props}
-                        selectedKeys={[props.currentKey]}
+                        selectedKeys={props.currentKey}
                         getCurrent={props.getCurrent}
                     />
                 </Header>
@@ -32,9 +30,6 @@ const Main: React.FC = (props: any) => {
                         closable
                     />
                     <div className="site-layout-background">
-                        {/* {(currentKey === 'monitor' ||
-                            currentKey === 'fault' ||
-                            currentKey === 'forecast') && <FilterComponent {...props} />} */}
                         <Outlet />
                     </div>
                 </Content>

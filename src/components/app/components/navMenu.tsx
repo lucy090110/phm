@@ -32,27 +32,38 @@ const NavMenu: React.FC<any> = (props) => {
             navigate(path);
         }
     };
-    const getMenuItem = (data:any) => {
-        return data.map((item:any) => {
-            const key = item.key;
-            if (item.childNav?.length > 0) {
-                return (
-                    <SubMenu key={key} title={item.title}>
-                        {getMenuItem(item.childNav)}
-                    </SubMenu>
-                );
+    const getMenuItems = (data:any,isChild?:boolean) => {
+        const items:any[]=[];
+        if(!isChild){
+            items.push({
+                label:"首页",
+                key:'home'
+            });
+        }
+        for(let i=0;i<data.length;i++){
+            const item=data[i];
+            let children:any=null;
+            let obj:any={
+                label:item.title,
+                key:item.key
             }
-            return <Menu.Item key={key}>{item.title}</Menu.Item>;
-        });
+            if (item.childNav?.length > 0) {
+                children=getMenuItems(item.childNav,true)
+                obj={
+                    ...obj,
+                    children
+                }
+            }
+            items.push(obj)
+        }
+       return items;
     };
     const { selectedKeys } = props;
     const { menuArr } = routemap;
-    const menuItem = getMenuItem(menuArr);
+    const menuItems = getMenuItems(menuArr);
+    console.log(menuItems)
     return (
-        <Menu mode="horizontal" selectedKeys={selectedKeys} onClick={handleClick}>
-            <Menu.Item key={'home'}>首页</Menu.Item>
-            {menuItem}
-        </Menu>
+       <Menu onClick={handleClick} selectedKeys={[selectedKeys]} mode="horizontal" items={menuItems} />
     );
 };
 
