@@ -70,15 +70,10 @@ const MachineComponent: React.FC<any> = (props: any) => {
         entrance,
         systemKey,
         systemName,
-        currentKey,
         eleName,
         machineEleArr,
         eleKey
     } = props;
-    let detailsHref = `/app/fault?systemKey=${systemKey}`;
-    if (eleKey !== systemKey && eleKey !== '') {
-        detailsHref += `&&eleKey=${eleKey}`;
-    }
     const machineEleChange = (eleObj:any) => {
         const { eleKey, systemKey } = eleObj;
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import { cycleDetailsModule } from './configData';
 import CycleInfo from './components/cycleInfo';
-// import MarqueeComponent from '../common/marqueeComponent';
+import MarqueeComponent from '../common/marqueeComponent';
 import CycleForcecast from './components/cycleForcecast';
 import CycleEmergency from './components/cycleEmergency';
 import CycleMaintenance from './components/cycleMaintenance';
@@ -15,7 +15,7 @@ class CycleDetails extends React.Component<any> {
                 component = <CycleInfo />;
                 break;
             case 'alarmLogging':
-                // component = <MarqueeComponent hasCycle={true} />;
+                component = <MarqueeComponent hasCycle={true} />;
                 break;
             case 'forecast':
                 component = <CycleForcecast />;

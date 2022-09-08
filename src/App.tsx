@@ -1,13 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router,useRoutes } from 'react-router-dom';
+import {useRoutes } from 'react-router-dom';
 import routes from "./routes";
-import logo from './logo.svg';
-import './App.css';
+import "@/phm/css/index.less";
 
 function App() {
-
-  // const element = useRoutes(routes);
-  return useRoutes(routes);
+  const element = useRoutes(routes);
+  return <div>{element}</div>
 }
 
 export default App;

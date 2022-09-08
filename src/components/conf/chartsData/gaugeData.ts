@@ -3,6 +3,7 @@ import * as echarts from 'echarts';
 const colors = ['#e00005', '#e6a900', '#03fc80', '#04d5fc'];
 const fontColor = '#0089fa';
 const option = {
+    backgroundColor:'transparent',
     series: [
         {
             type: 'gauge',

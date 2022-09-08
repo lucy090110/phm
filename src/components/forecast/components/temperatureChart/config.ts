@@ -7,7 +7,7 @@ const splitLineStyle = {
 };
 const data:any[] = [];
 for (let i = 1; i < 24; i++) {
-    let num:any=Math.random() / 10 + (24 - i) * 0.03;
+    const num:any=Math.random() / 10 + (24 - i) * 0.03;
     data.push(num.toFixed(2) * 100);
 }
 export const option = {

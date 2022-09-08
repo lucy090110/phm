@@ -1,0 +1,106 @@
+.compute-drill {
+    height: calc(100vh - 120px);
+    width: 900px;
+    margin: 0 auto;
+
+    .inner {
+        padding: 20px;
+    }
+
+    .steps-box,
+    .details-box {
+        height: 100%;
+        overflow-y: auto;
+    }
+    .steps-box {
+        padding: 20px 50px;
+    }
+    .steps-content {
+        padding: 20px;
+        .control-group + .control-group {
+            margin-top: 15px;
+        }
+    }
+}
+.compute-row {
+    height: 100%;
+}
+
+.steps-action {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.pretreatment-box + .pretreatment-box {
+    padding-top: 15px;
+}
+
+.ant-progress-circle .ant-progress-text {
+    color: #fff;
+}
+
+.white-text {
+    color: #fff;
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: -30px;
+}
+
+.result-btns {
+    display: flex;
+    flex-direction: row;
+}
+
+.process-box {
+    padding-top: 15px;
+}
+.result-msg {
+    margin-top: 20px;
+    font-size: 12px;
+}
+.result-msg > p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.compute-task {
+    height: calc(100vh - 120px);
+    .action-box {
+        a + a {
+            margin-left: 8px;
+        }
+        .delete {
+            color: rgb(250 91 91);
+        }
+    }
+    .filter-bar {
+        margin-bottom: 10px;
+    }
+}
+.details-box-modal .compute-drill {
+    height: calc(100vh - 300px);
+}
+.details-drill {
+    border: none;
+    .inner {
+        inset: 0;
+        padding: 0;
+    }
+    .steps-box,
+    .steps-action {
+        display: none;
+    }
+    .steps-content {
+        padding: 0;
+    }
+}
+.filter-bar > .ant-col + .ant-col {
+    margin-left: 15px;
+}

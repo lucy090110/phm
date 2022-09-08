@@ -19,7 +19,6 @@ const getCurrent:any = () => {
     let systemKey = '';
     let systemName = '';
     let eleName = '';
-    let infoData:any;
     let machineEleArr = null;
     let varType = null;
     let varArr = null;
@@ -85,7 +84,7 @@ const getCurrent:any = () => {
         systemKey = searchString.split('=')[1];
     }
 
-    infoData = menuArr[0]?.childNav?.filter((item) => {
+    const infoData:any = menuArr[0]?.childNav?.filter((item) => {
         return systemKey === item.key;
     });
     systemName = infoData?infoData[0]?.title:'';

@@ -1,14 +1,14 @@
 import React from 'react';
 import { Row, Col, Carousel } from 'antd';
 import { cycleDetailsData } from '../configData';
-// import GaugeBox from '@/phm/components/common/gaugebox';
+import GaugeBox from '@/phm/components/common/gaugebox';
 
 const CycleInfo: React.FC = () => {
     return (
         <div className={'info-main'}>
             <Carousel autoplay>
                 <div key={0}>
-                    {/*<GaugeBox entrance={'home'} />*/}
+                    <GaugeBox entrance={'home'} />
                 </div>
                 <div className={'circle-list'} key={1}>
                     <Row>

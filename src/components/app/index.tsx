@@ -11,8 +11,9 @@ const Main: React.FC = (props: any) => {
     const { currentKey } = props;
     const { pathname, hash, search } = location;
     useEffect(() => {
+        console.log(`effect--------1`)
         props.getCurrent();
-    }, [pathname, hash, search]);
+    },[pathname, hash, search]);
     return (
         <div className={'app-main'}>
             <Layout>

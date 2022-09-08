@@ -37,7 +37,7 @@ class MarqueeComponent extends PureComponent<any> {
                     {recordData.map((item3, index3) => {
                         return (
                             <Col span={12} key={index3}>
-                                <div className={'title'}>{item3.title}</div>
+                                {/*<div className={'title'}>{item3.title}</div>*/}
                                 <div className={'marquee-view'}>
                                     <div className={'marquee'}>
                                         {item3.data.map((item4, index4) => {

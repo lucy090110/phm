@@ -11,7 +11,10 @@ import { cycleData } from './configData';
 
 const { Header, Content } = Layout;
 
-class Home extends React.Component {
+class Home extends React.Component<any,any> {
+    constructor(props:any) {
+        super(props);
+    }
     state = {
         cycleType: null
     };
@@ -25,9 +28,10 @@ class Home extends React.Component {
             cycleType: null
         });
     };
-
     render() {
         const { cycleType } = this.state;
+        const {getCurrent}=this.props;
+        console.log(this.props)
         return (
             <div className={'home-main'}>
                 <Layout>
@@ -74,7 +78,7 @@ class Home extends React.Component {
                                     <div className={'panel train-box'}>
                                         <div className={'inner'}>
                                             <MachineComponent
-                                                viewStyle={{ height: '28rem' }}
+                                                viewStyle={{ height: '28rem' }} getCurrent={getCurrent}
                                                 imgStyle={{
                                                     backgroundSize: '940px auto',
                                                     height: '23rem',
