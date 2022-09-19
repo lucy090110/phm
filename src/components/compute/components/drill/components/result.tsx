@@ -168,7 +168,7 @@ const Result:React.FC=({ handleStepChange, type }:any) =>{
                 title="数据详情"
                 width={800}
                 footer={null}
-                visible={isModalVisible}
+                open={isModalVisible}
                 onOk={() => {
                     setIsModalVisible(false);
                 }}

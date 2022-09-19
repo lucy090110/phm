@@ -546,6 +546,7 @@ export const resultTableData:any = [
 
 export const dataSource4:any = [
     {
+        key: '1',
         col0: '1',
         col1: '986567649',
         col2: '-',
@@ -556,6 +557,7 @@ export const dataSource4:any = [
         status: '-'
     },
     {
+        key: '2',
         col0: '2',
         col1: '986567600',
         col2: '-',
@@ -566,6 +568,7 @@ export const dataSource4:any = [
         status: '-'
     },
     {
+        key: '3',
         col0: '3',
         col1: '986567649',
         col2: '模型v1.0',
@@ -576,6 +579,7 @@ export const dataSource4:any = [
         status: '已发布'
     },
     {
+        key: '4',
         col0: '4',
         col1: '986567600',
         col2: '模型v2.0',

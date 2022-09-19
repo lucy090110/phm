@@ -173,7 +173,6 @@ const TableComponent = () => {
                     }
                     return item;
                 });
-                console.log(actionArr);
                 const deleteObj = {
                     text: '删除',
                     key: 'delete',

@@ -72,6 +72,8 @@ export const option = {
     },
     grid: {
         top: 10,
+        left:20,
+        right:20,
         bottom: 40
     },
     yAxis: {

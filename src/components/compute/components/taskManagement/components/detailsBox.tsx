@@ -21,7 +21,7 @@ function DetailsBox() {
             <Modal
                 title="详情"
                 style={{ top: 200 }}
-                visible={isModalVisible}
+                open={isModalVisible}
                 onOk={handleOk}
                 onCancel={handleCancel}
                 width={'650px'}

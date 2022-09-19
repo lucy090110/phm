@@ -5,7 +5,6 @@ import TaskManagement from '@/phm/components/compute/components/taskManagement';
 import './css/index.less';
 
 const Compute = (props:any) => {
-    console.log(`currentKey是${props.currentKey}`);
     const { currentKey } = props;
     useEffect(() => {}, [currentKey]);
     const getContent = () => {

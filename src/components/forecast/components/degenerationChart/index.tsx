@@ -16,7 +16,7 @@ function VariableChart({ height}:any) {
         <div>
             <h2 className="z-chart-title">退化因子</h2>
             <div style={{ height }} ref={containerRef1} />
-            <p style={{ color: '#fff', textAlign: 'center', marginTop: -10 }}>时间（*10s）</p>
+            {/*<p style={{ color: '#fff', textAlign: 'center', marginTop: -10 }}>时间（*10s）</p>*/}
         </div>
     );
 }

@@ -7,7 +7,7 @@ const CycleEmergency: React.FC = () => {
                 <i className={`iconfont icon-warning`} />
             </div>
             <div className={`emergency-message`}>
-                <span>牵引电机</span>出现s级故障
+                <span>真空泵</span>出现s级故障
                 <br />
                 建议及时检测处理
                 <br />

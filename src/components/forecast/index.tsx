@@ -16,7 +16,10 @@ import DegenerateChart from './components/degenerationChart';
 import FaultChart from './components/faultChart';
 import LifePrediction from './components/lifePrediction';
 import ForecastFilter from './components/filter-component';
+import HealthyChartTest from './components/healthyChartTest'
 import './index.less';
+import VariableChartTest from "@/phm/components/forecast/components/variableChartTest";
+import FaultChartTest from "@/phm/components/forecast/components/faultChartTest"
 function Prediction() {
     const [healthyChartData, setHealthyChartData] = useState([]);
     const [faultPredictionChartData, setFaultPredictionChartData] = useState([]);
@@ -55,16 +58,19 @@ function Prediction() {
                 <Col span={16}>
                     <Row gutter={[24, 24]}>
                         <Col span={24}>
-                            <HealthyChart
-                                data={healthyChartData}
-                                title={deviceName}
-                                onDataUpdate={onUpdateDataByType}
-                                relatedParams={params4RelatedMeter}
-                            />
+                            {/*<HealthyChart*/}
+                            {/*    data={healthyChartData}*/}
+                            {/*    title={deviceName}*/}
+                            {/*    onDataUpdate={onUpdateDataByType}*/}
+                            {/*    relatedParams={params4RelatedMeter}*/}
+                            {/*/>*/}
+                            <HealthyChartTest/>
                         </Col>
                         <Col span={24}>
-                            <VariableChart data={relatedMeterData} />
+                            {/*<VariableChart data={relatedMeterData} />*/}
                             {/* <ElementsHealthy /> */}
+                            <VariableChartTest/>
+
                         </Col>
                     </Row>
                 </Col>

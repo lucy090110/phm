@@ -42,7 +42,7 @@ export const option = {
         top: '30px'
     },
     series: {
-        data: [],
+        data: [120, 200, 150, 80, 70, 110, 130],
         // name: '实际值',
         type: 'bar'
     }

@@ -8,7 +8,6 @@ const { SubMenu } = Menu;
 const NavMenu: React.FC<any> = (props) => {
     const navigate = useNavigate();
     const handleClick = (e:any) => {
-        console.log('click ', e);
         const { selectedKeys, systemKey, eleKey, varType } = props;
         const { keyPath, key } = e;
         if (selectedKeys[0] !== key) {
@@ -61,7 +60,6 @@ const NavMenu: React.FC<any> = (props) => {
     const { selectedKeys } = props;
     const { menuArr } = routemap;
     const menuItems = getMenuItems(menuArr);
-    console.log(menuItems)
     return (
        <Menu onClick={handleClick} selectedKeys={[selectedKeys]} mode="horizontal" items={menuItems} />
     );
